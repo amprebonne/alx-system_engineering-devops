@@ -1,0 +1,2 @@
+#!/bin/bash
+printf '%s\n' ./* | LC_COLLATE=C sort -d -f | awk -F/ '{if ($NF ~ /^[[:alnum:]]/) print $NF; else print $0}'
